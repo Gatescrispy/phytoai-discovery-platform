@@ -20,33 +20,33 @@ st.set_page_config(
         'About': '🧬 PhytoAI - IA pour la Découverte Phytothérapeutique Durable | M1 IA School 2024-2025'
     }
 )
-
-# CSS pour interface GitHub Pages compatible
-st.markdown("""
-<style>
-    .main-header {
-        background: linear-gradient(45deg, #667eea, #764ba2);
-        color: white;
-        padding: 2rem;
-        border-radius: 15px;
-        margin-bottom: 2rem;
-        text-align: center;
-    }
     
-    .github-badge {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        z-index: 999;
-    }
-    
-    .stApp > header {
-        background-color: transparent;
-    }
-    
-    .stApp {
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    }
+    # CSS pour interface GitHub Pages compatible
+    st.markdown("""
+    <style>
+        .main-header {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .github-badge {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 999;
+        }
+        
+        .stApp > header {
+            background-color: transparent;
+        }
+        
+        .stApp {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
     
     .metric-card {
         background: white;
@@ -64,39 +64,39 @@ st.markdown("""
         margin: 1rem 0;
         text-align: center;
     }
-</style>
-""", unsafe_allow_html=True)
-
-# Header avec liens GitHub
-st.markdown("""
-<div class="main-header">
-    <h1>🧬 PhytoAI - Découverte Phytothérapeutique</h1>
-    <p>Intelligence Artificielle au service du développement durable</p>
+    </style>
+    """, unsafe_allow_html=True)
+    
+    # Header avec liens GitHub
+    st.markdown("""
+    <div class="main-header">
+        <h1>🧬 PhytoAI - Découverte Phytothérapeutique</h1>
+        <p>Intelligence Artificielle au service du développement durable</p>
     <a href="https://github.com/Gatescrispy/phytoai-discovery-platform" target="_blank" 
-       style="color: white; text-decoration: none;">
-        📄 Voir le projet complet sur GitHub
-    </a>
-</div>
-""", unsafe_allow_html=True)
-
-# Badge GitHub
-st.markdown("""
-<div class="github-badge">
+           style="color: white; text-decoration: none;">
+            📄 Voir le projet complet sur GitHub
+        </a>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Badge GitHub
+    st.markdown("""
+    <div class="github-badge">
     <a href="https://github.com/Gatescrispy/phytoai-discovery-platform" target="_blank">
         <img src="https://img.shields.io/github/stars/Gatescrispy/phytoai-discovery-platform?style=social" alt="GitHub Stars">
-    </a>
-</div>
-""", unsafe_allow_html=True)
-
-# Mode démo pour portfolio
-with st.sidebar:
-    st.markdown("### 🎯 Mode Portfolio")
-    demo_mode = st.checkbox("Mode Démo", value=True, help="Interface optimisée pour démonstration")
+        </a>
+    </div>
+    """, unsafe_allow_html=True)
     
-    if demo_mode:
+    # Mode démo pour portfolio
+    with st.sidebar:
+        st.markdown("### 🎯 Mode Portfolio")
+        demo_mode = st.checkbox("Mode Démo", value=True, help="Interface optimisée pour démonstration")
+        
+        if demo_mode:
         st.success("🌟 Interface en mode démo pour portfolio GitHub")
-        st.markdown("""
-        **Fonctionnalités disponibles :**
+            st.markdown("""
+            **Fonctionnalités disponibles :**
         - ✅ Prédictions bioactivité
         - ✅ Visualisations molécules
         - ✅ Mode présentation
@@ -145,33 +145,33 @@ with col3:
     """, unsafe_allow_html=True)
 
 st.markdown("---")
-
+    
 # Section Objectifs
 st.markdown("""
 ### 🎯 Objectifs du Projet
 
 PhytoAI révolutionne la découverte phytothérapeutique en combinant :
 """)
-
-col1, col2, col3 = st.columns(3)
-
-with col1:
+    
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
     st.markdown("""
     <div class="feature-box">
         <h4>🤖 Intelligence Artificielle</h4>
         <p>Random Forest, CNN, GNN<br/>Modèles prédictifs avancés</p>
     </div>
     """, unsafe_allow_html=True)
-
-with col2:
+        
+    with col2:
     st.markdown("""
     <div class="feature-box">
         <h4>📊 Big Data Phytochimique</h4>
         <p>1.4M composés analysés<br/>Bases ChEMBL & PubChem</p>
     </div>
     """, unsafe_allow_html=True)
-
-with col3:
+        
+    with col3:
     st.markdown("""
     <div class="feature-box">
         <h4>🌱 Développement Durable</h4>

@@ -273,7 +273,7 @@ INSTRUCTIONS EXPERT :
                 prompt = base_context + """
 INSTRUCTIONS CLINIQUES :
 - Utilise les données réelles PhytoAI pour guider les recommandations
-- Focus sur applications pratiques et dosages cliniques
+- Focus sur applications pratiques et dosages cliniques  
 - Mentionne contre-indications et interactions médicamenteuses
 - Donne des protocols d'usage et monitoring
 - Inclus données de sécurité et effets secondaires

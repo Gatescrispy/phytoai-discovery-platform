@@ -1,0 +1,5 @@
+try:
+    from streamlit_mega_complete_connector import mega_complete_connector
+    MEGA_AVAILABLE = True
+except ImportError:
+    MEGA_AVAILABLE = False
