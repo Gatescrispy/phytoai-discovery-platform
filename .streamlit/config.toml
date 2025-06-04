@@ -34,4 +34,4 @@ toolbarMode = "viewer"
 [ui]
 # Interface utilisateur
 hideTopBar = false
-hideSidebarNav = false 
+hideSidebarNav = false
