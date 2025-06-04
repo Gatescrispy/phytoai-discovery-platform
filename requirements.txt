@@ -23,9 +23,13 @@ pyyaml>=6.0.0
 streamlit-option-menu>=0.3.6
 streamlit-aggrid>=0.3.4
 
-# Google Generative AI
-google-generativeai==0.8.3
-groq==0.11.0
+# Google Generative AI & LLM Integration
+google-generativeai>=0.8.3
+groq>=0.11.0
+
+# Text processing for fuzzy search
+fuzzywuzzy>=0.18.0
+python-Levenshtein>=0.21.0
 
 # Additional dependencies
 datetime

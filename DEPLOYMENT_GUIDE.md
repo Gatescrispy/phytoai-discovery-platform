@@ -18,17 +18,17 @@ git push origin main
 3. Cliquer sur "New app"
 
 #### Étape 2: Configuration
-- **Repository:** `cedrictantcheu/phytoai-discovery-platform`
+- **Repository:** `Gatescrispy/phytoai-discovery-platform`
 - **Branch:** `main`
-- **Main file path:** `streamlit_app.py`
-- **App URL:** `phytoai-portfolio` (ou votre choix)
+- **Main file path:** `PhytoAI-Portfolio/streamlit_app.py`
+- **App URL:** `phytoai-portfolio-platform` (URL actuelle)
 
 #### Étape 3: Dépendances
-Le fichier `requirements_streamlit.txt` contient les dépendances optimisées pour le cloud.
+Le fichier `requirements.txt` contient les dépendances optimisées pour le cloud.
 
 ### 3. **URLs Finales**
-- **App Streamlit:** https://phytoai-portfolio.streamlit.app
-- **Repository GitHub:** https://github.com/cedrictantcheu/phytoai-discovery-platform
+- **App Streamlit:** https://phytoai-portfolio-platform.streamlit.app
+- **Repository GitHub:** https://github.com/Gatescrispy/phytoai-discovery-platform
 - **Documentation:** Lien vers le rapport PDF
 
 ## 🔧 Configuration Avancée
@@ -38,6 +38,7 @@ Le fichier `requirements_streamlit.txt` contient les dépendances optimisées po
 # Dans Streamlit Cloud > Settings > Advanced
 ENVIRONMENT = "production"
 DEBUG = "false"
+GEMINI_API_KEY = "votre_clé_api_gemini"
 ```
 
 ### 📊 Métriques de Performance
@@ -46,7 +47,9 @@ DEBUG = "false"
 - **Compatibilité:** Python 3.9+
 
 ## 🎯 Fonctionnalités Déployées
-- ✅ Interface principale PhytoAI
+- ✅ Interface principale PhytoAI (9 pages)
+- ✅ Assistant IA avec Gemini intégré
+- ✅ Données réelles (32 composés + 229 bioactivités)
 - ✅ Visualisations interactives
 - ✅ Prédictions IA temps réel
 - ✅ Export résultats
@@ -56,27 +59,28 @@ DEBUG = "false"
 
 ### Erreur de dépendances
 ```bash
-# Si problème avec RDKit sur Streamlit Cloud
-pip install rdkit-pypi==2022.9.5
+# Si problème avec Google Generative AI
+pip install google-generativeai>=0.8.3
 ```
 
 ### Problème de mémoire
-- Utiliser `requirements_streamlit.txt` (version allégée)
+- Utiliser chunks pour chargement données
 - Optimiser les imports conditionnels
 
 ### Authentification GitHub
 ```bash
 # Configurer le token GitHub
-git remote set-url origin https://[TOKEN]@github.com/cedrictantcheu/phytoai-discovery-platform.git
+git remote set-url origin https://[TOKEN]@github.com/Gatescrispy/phytoai-discovery-platform.git
 ```
 
 ## 📱 Test Local
 ```bash
 # Lancer en local avant déploiement
+cd PhytoAI-Portfolio
 streamlit run streamlit_app.py
 
-# Ou avec configuration spécifique
-streamlit run streamlit_app.py --server.port=8501
+# Ou avec port spécifique
+streamlit run streamlit_app.py --server.port=8502
 ```
 
 ## 🎨 Personnalisation
@@ -88,6 +92,7 @@ Le fichier `.streamlit/config.toml` définit:
 - Interface: optimisée portfolio
 
 ### 🔗 Intégrations
+- Assistant IA avec clé Gemini
 - GitHub badge automatique
 - Liens vers documentation
 - Mode démo portfolio
@@ -95,4 +100,4 @@ Le fichier `.streamlit/config.toml` définit:
 ---
 
 **🎓 Projet M1 IA School 2024-2025**  
-**📧 Support:** [Issues GitHub](https://github.com/cedrictantcheu/phytoai-discovery-platform/issues) 
+**📧 Support:** [Issues GitHub](https://github.com/Gatescrispy/phytoai-discovery-platform/issues) 

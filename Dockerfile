@@ -4,7 +4,7 @@ FROM python:3.9-slim
 # Informations du projet
 LABEL maintainer="TANTCHEU Noussi Cédric <cedric.tantcheu@ia-school.fr>"
 LABEL description="PhytoAI - Plateforme IA pour découverte phytothérapeutique"
-LABEL version="1.0.0"
+LABEL version="2.0.0"
 
 # Variables d'environnement
 ENV PYTHONUNBUFFERED=1
@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install -y \
     g++ \
     libffi-dev \
     libssl-dev \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Copie des fichiers de dépendances
@@ -30,10 +31,13 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-# Copie du code source
+# Copie du code source et des données
+COPY streamlit_app.py .
 COPY src/ src/
 COPY docs/ docs/
-COPY data/ data/
+COPY real_compounds_dataset.csv .
+COPY real_bioactivities_dataset.csv .
+COPY .streamlit/ .streamlit/
 
 # Port d'exposition
 EXPOSE 8501
@@ -41,5 +45,5 @@ EXPOSE 8501
 # Point d'entrée
 HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
 
-# Commande de démarrage
-CMD ["streamlit", "run", "src/dashboard/app.py", "--server.port=8501", "--server.address=0.0.0.0"] 
+# Commande de démarrage - Point d'entrée correct
+CMD ["streamlit", "run", "streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"] 
